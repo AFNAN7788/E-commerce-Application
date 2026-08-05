@@ -1,6 +1,6 @@
-# Afnan Mart – React E-Commerce Application
+# E-Commerce Application
 
-Afnan Mart is a **modern React-based e-commerce web application** that demonstrates real-world shopping cart functionality, global state management, product filtering, authentication flow, and a polished user interface.
+E-Commerce Application is a **modern React-based e-commerce web application** that demonstrates real-world shopping cart functionality, global state management, product filtering, authentication flow, and a polished user interface.
 
 The project is built with a focus on **clean architecture, reusable components, and practical business logic**, making it suitable for learning, portfolio showcase, and real-world frontend practice.
 
@@ -9,39 +9,6 @@ The project is built with a focus on **clean architecture, reusable components, 
 
 **Website:** https://afnan-mart.vercel.app/  
 **GitHub Repository:** https://github.com/IAmAfnan/E-COMMERCE-WEBSITE-React
-
-## Screenshots
-
-### Home Page
-<img width="1920" height="1020" alt="Screenshot 2025-12-18 161316" src="https://github.com/user-attachments/assets/62aa0fe3-4989-4f8a-ba9b-5980dc8d5c17" />
-
-### Sign In Page
-
-<img width="1920" height="1080" alt="Screenshot (1318)" src="https://github.com/user-attachments/assets/d0a888a4-4455-4ae9-a438-35d202911452" />
-
-### Explore Product Section
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d524bace-5f5e-46ce-a805-b30775640497" />
-
-### Filtering Product Based on Category or Price
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0722f39b-03e8-41bf-afbf-fc91fdedd0cb" />
-
-### Add To Cart Page
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/62f713eb-189b-4128-b21a-1e306d87a258" />
-
-### View Product Details Page
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a8bd1512-24de-452a-b40b-59301e901001" />
-
-### Why Choose Afnan Mart Section
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f25261f3-46ed-4257-842c-5d712997132d" />
-
-### Footer Section 
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3bff0f93-559b-49b2-b507-c62e72e962be" />
 
 
 ## Features
@@ -91,53 +58,13 @@ The project is built with a focus on **clean architecture, reusable components, 
 - **Animations:** Framer Motion
 
 ---
-## 📁 Project Structure
-
-```bash
-src/
-│
-├── components/
-│   ├── Header.jsx
-│   ├── Footer.jsx
-│   ├── EndFooter.jsx
-│   ├── Sidebar.jsx
-│   ├── Hero.jsx
-│   ├── Product.jsx
-│   ├── CartItem.jsx
-│   ├── CategoryFilter.jsx
-│   ├── PriceFilter.jsx
-│   ├── ContactSection.jsx
-│   ├── AboutAfnanMart.jsx
-│   └── ScrollToTop.jsx
-│
-├── contexts/
-│   ├── AuthContext.jsx
-│   ├── CartContext.jsx
-│   ├── ProductContext.jsx
-│   └── SidebarContext.jsx
-│
-├── pages/
-│   ├── Home.jsx
-│   ├── ProductDetails.jsx
-│   ├── Signin.jsx
-│   ├── Signup.jsx
-│   └── OrderSuccess.jsx
-│
-├── img/
-│   ├── bghero.png
-│   └── logo.png
-│
-├── App.jsx
-├── main.jsx
-└── index.css
-```
 
 ##  Getting Started
 
 ###  Clone the Repository
 ```bash
-git clone https://github.com/IAmAfnan/E-COMMERCE-WEBSITE-React.git
-cd E-COMMERCE-WEBSITE-React
+git clone https://github.com/IAmAfnan/E-commerce-Application.git
+cd E-commerce-Application
 ```
 
 ###  Install Dependencies
@@ -183,15 +110,7 @@ npm run preview
 
 ---
 
-##  Author
 
-**Afnan**  
-Aspiring Developer & React Enthusiast
-
- Email: `iamafnan0@gmail.com`  
- 🔗 LinkedIn: [Afnan](https://www.linkedin.com/in/muhammad-afnan15)
-
----
 
 ## 🚀 Deploying to Vercel
 
