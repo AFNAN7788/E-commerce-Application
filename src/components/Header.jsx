@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { SidebarContext } from "../contexts/SidebarContext";
 import { CartContext } from "../contexts/CartContext";
 import { AuthContext } from "../contexts/AuthContext";
 import { Link } from "react-router-dom";
-import Logo from "../img/logo.png";
+import Logo from "../img/logo.svg";
 import { BsBag } from "react-icons/bs";
 
 const Header = () => {
@@ -34,8 +34,8 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between h-full">
         {/* Brand logo */}
         <Link to="/">
-          <div className="w-[70px] h-[70px] bhusan-mart">
-            <img src={Logo} alt="Bhusan TechMart" />
+          <div className="w-[55px] h-[55px] overflow-hidden rounded-xl shadow-lg border border-cyan-500/20 hover:scale-105 transition-transform">
+            <img src="/image/log.png" alt="Afnan Mart" className="w-full h-full object-cover" />
           </div>
         </Link>
 

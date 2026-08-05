@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { ProductContext } from "../contexts/ProductContext";
 import Product from "../components/Product";
 import Hero from "../components/Hero";
-import AboutBhusanMart from "../components/AboutBhusanMart";
+import AboutAfnanMart from "../components/AboutAfnanMart";
 import ContactSection from "../components/ContactSection";
 import CategoryFilter from "../components/CategoryFilter";
 import PriceFilter from "../components/PriceFilter";
@@ -15,7 +15,7 @@ const Home = () => {
       {/* Landing section */}
       <Hero />
 
-      <section className="py-20 bg-[#0b132b]">
+      <section id="products" className="py-20 bg-[#0b132b]">
         <div className="container mx-auto px-6">
           <h1 className="text-3xl font-semibold mb-10 text-center text-white">
             Explore Our Products
@@ -43,7 +43,7 @@ const Home = () => {
       </section>
 
       {/* Static informational sections */}
-      <AboutBhusanMart />
+      <AboutAfnanMart />
       <ContactSection />
     </div>
   );

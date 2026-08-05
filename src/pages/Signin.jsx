@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
@@ -10,24 +10,17 @@ const Signin = () => {
 
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [remember, setRemember] = useState(false);
+  const [remember, setRemember] = useState(() => {
+    return !!localStorage.getItem("rememberEmail");
+  });
   const [showForgot, setShowForgot] = useState(false);
   const [pressed, setPressed] = useState(false);
 
   const [error, setError] = useState("");
-  const [formData, setFormData] = useState({
-    email: "",
+  const [formData, setFormData] = useState(() => ({
+    email: localStorage.getItem("rememberEmail") || "",
     password: "",
-  });
-
-  // Loads saved email if "Remember me" was previously enabled
-  useEffect(() => {
-    const savedEmail = localStorage.getItem("rememberEmail");
-    if (savedEmail) {
-      setFormData((prev) => ({ ...prev, email: savedEmail }));
-      setRemember(true);
-    }
-  }, []);
+  }));
 
   const isFormValid = formData.email && formData.password;
 
@@ -68,8 +61,8 @@ const Signin = () => {
         <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
           <div className="flex justify-center mb-4">
             <img
-              src="/image/logo.png"
-              alt="Bhusan Mart"
+              src="/image/logo.svg"
+              alt="Afnan Mart"
               className="w-20 h-20 rounded-full shadow-lg"
             />
           </div>

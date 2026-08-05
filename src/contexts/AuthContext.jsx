@@ -1,23 +1,18 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  useEffect(() => {
+  const [user, setUser] = useState(() => {
     const session = localStorage.getItem("btm-session");
-    if (session) {
-      setUser(JSON.parse(session));
-    }
-  }, []);
+    return session ? JSON.parse(session) : null;
+  });
 
   const signup = (username, email, password) => {
     const newUser = { username, email, password };
 
     localStorage.setItem("btm-user", JSON.stringify(newUser));
-
   };
-
 
   const signin = (email, password) => {
     const registeredUser = JSON.parse(localStorage.getItem("btm-user"));
@@ -35,9 +30,8 @@ const AuthProvider = ({ children }) => {
   };
 
   const logout = () => {
-    setUser(null);
     localStorage.removeItem("btm-session");
-    localStorage.removeItem("cart"); 
+    setUser(null);
   };
 
   return (

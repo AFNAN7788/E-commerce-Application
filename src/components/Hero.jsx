@@ -1,6 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
 const Hero = () => {
   return (
     <section className="relative h-[800px] bg-hero bg-no-repeat bg-cover bg-center py-20 overflow-hidden">
@@ -34,16 +31,21 @@ const Hero = () => {
           </p>
 
           {/* Call-to-action link */}
-          <Link
-            to={"/"}
+          <a
+            href="#products"
             className="self-start mt-8 uppercase font-semibold
                        text-cyan-400 border-b border-cyan-400 pb-1
                        hover:text-cyan-300 hover:border-cyan-300
                        transition-all duration-300
                        animate-fadeInUp delay-500"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("products");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Discover More
-          </Link>
+          </a>
         </div>
       </div>
     </section>

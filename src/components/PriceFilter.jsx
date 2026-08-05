@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { ProductContext } from "../contexts/ProductContext";
 import { FaChevronDown } from "react-icons/fa";
 

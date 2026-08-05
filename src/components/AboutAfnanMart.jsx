@@ -1,9 +1,9 @@
-import React from "react";
 import aboutImg from "/image/ecompost.png";
 
-const AboutBhusanMart = () => {
+const AboutAfnanMart = () => {
   return (
     <section
+      id="about"
       className="
         relative pt-44 pb-32
         bg-[#05010f]
@@ -17,13 +17,13 @@ const AboutBhusanMart = () => {
     >
       {/* Decorative top divider */}
       <div
-        className="absolute top-0 left-0 w-full h-[1px] 
+        className="absolute top-0 left-0 w-full h-[1px]
                    bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent"
       />
 
       {/* Ambient background glow */}
       <div
-        className="absolute inset-0 bg-gradient-to-br 
+        className="absolute inset-0 bg-gradient-to-br
                    from-cyan-500/10 via-transparent to-fuchsia-600/10"
       />
 
@@ -31,11 +31,11 @@ const AboutBhusanMart = () => {
         {/* Section heading */}
         <div className="text-center mb-24">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Why Choose <span className="text-cyan-400">Bhusan Mart</span>
+            Why Choose <span className="text-cyan-400">Afnan Mart</span>
           </h2>
 
           <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Bhusan Mart is committed to delivering premium gadgets, trusted
+            Afnan Mart is committed to delivering premium gadgets, trusted
             service, and a seamless shopping experience.
           </p>
         </div>
@@ -102,7 +102,7 @@ const AboutBhusanMart = () => {
 
               <img
                 src={aboutImg}
-                alt="Bhusan Mart"
+                alt="Afnan Mart"
                 className="
                   relative z-10 max-w-sm w-full
                   drop-shadow-[0_0_50px_rgba(56,189,248,0.35)]
@@ -165,4 +165,4 @@ const AboutBhusanMart = () => {
   );
 };
 
-export default AboutBhusanMart;
+export default AboutAfnanMart;

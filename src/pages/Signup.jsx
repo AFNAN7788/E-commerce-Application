@@ -64,8 +64,8 @@ const Signup = () => {
         >
           <div className="flex justify-center mb-4">
             <img
-              src="/image/logo.png"
-              alt="Bhusan Mart Logo"
+              src="/image/logo.svg"
+              alt="Afnan Mart Logo"
               className="w-20 h-20 rounded-full shadow-md"
             />
           </div>
@@ -74,7 +74,7 @@ const Signup = () => {
             Create Account
           </h2>
           <p className="text-center text-white/60 mb-6">
-            Join Bhusan Mart & start shopping smarter
+            Join Afnan Mart & start shopping smarter
           </p>
 
           {error && (

@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 import { AuthContext } from "./AuthContext";
 import { ProductContext } from "./ProductContext";
 import { toast } from "react-toastify";
@@ -12,8 +12,12 @@ const CartProvider = ({ children }) => {
   const navigate = useNavigate();
 
   const [cart, setCart] = useState([]);
-  const [itemAmount, setItemAmount] = useState(0);
-  const [total, setTotal] = useState(0);
+
+  const itemAmount = cart.reduce((acc, item) => acc + item.amount, 0);
+  const total = cart.reduce(
+    (acc, item) => acc + item.price * item.amount,
+    0
+  );
 
   // Load cart based on logged-in user
   useEffect(() => {
@@ -31,12 +35,6 @@ const CartProvider = ({ children }) => {
       localStorage.setItem(`cart_${user.email}`, JSON.stringify(cart));
     }
   }, [cart, user]);
-
-  // Update total price and item count
-  useEffect(() => {
-    setTotal(cart.reduce((acc, item) => acc + item.price * item.amount, 0));
-    setItemAmount(cart.reduce((acc, item) => acc + item.amount, 0));
-  }, [cart]);
 
   const addToCart = (product) => {
     const item = cart.find((i) => i.id === product.id);

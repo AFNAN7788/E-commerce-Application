@@ -58,6 +58,23 @@ button {
   background: #475569;
 }
 
+/* Neon motion glow animation for decorative overlays */
+.neon-motion {
+  background: radial-gradient(circle, rgba(56,189,248,0.15) 0%, transparent 70%);
+  animation: neonPulse 4s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    opacity: 0.4;
+    filter: blur(80px);
+  }
+  50% {
+    opacity: 0.7;
+    filter: blur(100px);
+  }
+}
+
 /* Fade-in animation used across sections */
 
 @keyframes fadeInUp {
@@ -96,14 +113,14 @@ button {
 
 /* Branding and UI elements */
 
-.bhusan-mart {
+.afnan-mart {
   background-color: rgba(202, 221, 221, 0.523);
   border: 2px solid bisque;
   border-radius: 50%;
   transition: box-shadow 0.3s ease;
 }
 
-.bhusan-mart:hover {
+.afnan-mart:hover {
   box-shadow: 0 0 15px rgb(56, 189, 248);
 }
 
